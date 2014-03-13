@@ -16,7 +16,7 @@ cd /home/vagrant
     echo "---------------------------------------------------"
     echo "                     Installing                    "
     echo "---------------------------------------------------"
-    sudo apt-get install --assume-yes wget tar git-core python2.7-dev python-pip python-virtualenv language-pack-en-base
+    sudo apt-get install --assume-yes wget tar git-core python2.7-dev python-pip python-virtualenv language-pack-en-base vim
     echo "---------------------------------------------------"
     echo "               Reconfiguring languages             "
     echo "---------------------------------------------------"
