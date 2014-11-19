@@ -1,4 +1,4 @@
-Hey there, it looks like you want to setup a vagrant vm to develop pebble code on
+Hey there, it looks like you want to setup a Vagrant VM to develop [Pebble](https://getpebble.com/) watch faces and apps on.
 
 This is the right place to look!
 
@@ -7,22 +7,21 @@ Once you're done, you should be able to run:
 ```
 $ vagrant up
 $ vagrant ssh
-vagrant@precise64:~$ pebble --version
-PebbleSDK 2.0.1
+vagrant@vagrant-ubuntu-trusty-64:~$ pebble --version
+# PebbleSDK 2.7
 ```
 
-Yep, that's right. Pebble v2 in a vagrant image.
+Yep, that's right. [Pebble SDK](https://developer.getpebble.com/) v2.7 in a Vagrant image.
 
 It's not pretty, so pull requests are happily taken.
 
 Use it at your own risk.
 
-#######
 Instructions
-#######
+------------
 
-- [Install vagrant](https://docs.vagrantup.com/v2/installation/).
-    I have `Vagrant 1.4.3` installed. YMMV if you don't have it exactly
+- [Install Vagrant](https://docs.vagrantup.com/v2/installation/).
+    (Tested with `Vagrant 1.6.5`)
 
 - Clone my repo.
     Run:
@@ -30,8 +29,11 @@ Instructions
     $ git clone https://github.com/shalecraig/vagrant-pebble.git
     $ cd vagrant-pebble
     $ vagrant up
-    # wait for 10 min
+    # wait for about 10 mins
     $ vagrant ssh
+    $ pebble --version
+    # PebbleSDK 2.7
     ```
+- Dive into the [Pebble Hello World](https://developer.getpebble.com/2/additional/hello-world/)
 
 That's it.
