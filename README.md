@@ -8,10 +8,10 @@ Once you're done, you should be able to run:
 $ vagrant up
 $ vagrant ssh
 vagrant@vagrant-ubuntu-trusty-64:~$ pebble --version
-# PebbleSDK 2.7
+# PebbleSDK 2.9
 ```
 
-Yep, that's right. [Pebble SDK](https://developer.getpebble.com/) v2.7 in a Vagrant image.
+Yep, that's right. [Pebble SDK](https://developer.getpebble.com/) v2.9 in a Vagrant image.
 
 It's not pretty, so pull requests are happily taken.
 
@@ -32,7 +32,7 @@ Instructions
     # wait for about 10 mins
     $ vagrant ssh
     $ pebble --version
-    # PebbleSDK 2.7
+    # PebbleSDK 2.9
     ```
 - Dive into the [Pebble Hello World](https://developer.getpebble.com/2/additional/hello-world/)
 
