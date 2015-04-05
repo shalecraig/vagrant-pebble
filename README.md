@@ -1,39 +1,45 @@
-Hey there, it looks like you want to setup a Vagrant VM to develop [Pebble](https://getpebble.com/) watch faces and apps on.
+# vagrant-pebble
+> Vagrant Setup for Pebble SDK
 
-This is the right place to look!
+This is a fork of [shalecraig](https://github.com/shalecraig)'s
+[repo](https://github.com/shalecraig/vagrant-pebble).
+This is a slighly modified version of his work, I'll try to rebase to upstream as
+much as I can.
 
-Once you're done, you should be able to run:
+This Vagrant configuration will configure a VM with all the required for
+Pebble app development closely following this [guide](http://developer.getpebble.com/sdk/install/linux/).
 
-```
-$ vagrant up
-$ vagrant ssh
-vagrant@vagrant-ubuntu-trusty-64:~$ pebble --version
-# PebbleSDK 2.9
-```
+## Prerequisites
 
-Yep, that's right. [Pebble SDK](https://developer.getpebble.com/) v2.9 in a Vagrant image.
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+  - _tested with version 4.3_
+- [Vagrant](http://www.vagrantup.com/downloads)
+  - _tested with version 1.7.2_
 
-It's not pretty, so pull requests are happily taken.
+## Getting Started
 
-Use it at your own risk.
+Clone this repository
 
-Instructions
-------------
+    git clone https://github.com/jvtrigueros/vagrant-pebble
+    cd vagrant-pebble
 
-- [Install Vagrant](https://docs.vagrantup.com/v2/installation/).
-    (Tested with `Vagrant 1.6.5`)
+_Optional:_ Checkout the branch matching desired SDK version, `master` is on 2.9.
 
-- Clone my repo.
-    Run:
-    ```
-    $ git clone https://github.com/shalecraig/vagrant-pebble.git
-    $ cd vagrant-pebble
-    $ vagrant up
-    # wait for about 10 mins
-    $ vagrant ssh
-    $ pebble --version
-    # PebbleSDK 2.9
-    ```
-- Dive into the [Pebble Hello World](https://developer.getpebble.com/2/additional/hello-world/)
+    git checkout sdk-3.0-dp4
 
-That's it.
+Create and provision VM
+
+    vagrant up
+
+Done!
+
+    vagrant ssh
+
+    vagrant@vagrant-ubuntu-trusty-64:~$ pebble --version
+    PebbleSDK 2.9
+
+
+#### VM Defaults
+
+- **OS**: Ubuntu 14.04 x64
+- **RAM**: 4GB
