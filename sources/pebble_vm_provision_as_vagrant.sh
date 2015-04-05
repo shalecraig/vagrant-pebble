@@ -1,5 +1,7 @@
 #!/bin/bash
 
+PEBBLE_SDK=PebbleSDK-2.9
+
 echo "---------------------------------------------------"
 echo "                 Start as vagrant                  "
 echo "---------------------------------------------------"
@@ -8,23 +10,27 @@ echo "---------------------------------------------------"
 echo "          Starting to Build Pebble Stuff           "
 echo "---------------------------------------------------"
 mkdir -p /home/vagrant/pebble-dev
-chown vagrant:vagrant /home/vagrant/pebble-dev
 cd /home/vagrant/pebble-dev
 echo "---------------------------------------------------"
 echo "              Getting the pebble sdk               "
 echo "---------------------------------------------------"
-wget http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk2/PebbleSDK-2.9.tar.gz
-tar -zxf PebbleSDK-2.9.tar.gz
+wget -q -a /vagrant/pebble.log \
+  http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk2/$PEBBLE_SDK.tar.gz
+
+tar -zxf $PEBBLE_SDK.tar.gz
+rm $PEBBLE_SDK.tar.gz
+chown -R vagrant:vagrant /home/vagrant/pebble-dev
 echo "---------------------------------------------------"
 echo "                Setting up profile                 "
 echo "---------------------------------------------------"
-echo 'export PATH=/home/vagrant/pebble-dev/PebbleSDK-2.9/bin:$PATH' >> /home/vagrant/.profile
+echo "export PATH=/home/vagrant/pebble-dev/$PEBBLE_SDK/bin:\$PATH" >> /home/vagrant/.profile
 source /home/vagrant/.profile
-cd /home/vagrant/pebble-dev/PebbleSDK-2.9
+cd /home/vagrant/pebble-dev/$PEBBLE_SDK
 echo "---------------------------------------------------"
 echo "               Getting ubuntu tools                "
 echo "---------------------------------------------------"
-wget http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk/arm-cs-tools-ubuntu-universal.tar.gz
+wget -q -a /vagrant/pebble.log \
+  http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk/arm-cs-tools-ubuntu-universal.tar.gz
 tar -zxf arm-cs-tools-ubuntu-universal.tar.gz
 echo "---------------------------------------------------"
 echo "            Setting up using virtualenv            "
@@ -34,7 +40,7 @@ source .env/bin/activate
 echo "---------------------------------------------------"
 echo "            Pip installing requirements            "
 echo "---------------------------------------------------"
-pip install -r /home/vagrant/pebble-dev/PebbleSDK-2.9/requirements.txt
+pip install -r requirements.txt
 deactivate
 echo "---------------------------------------------------"
 echo "                       Done!                       "
