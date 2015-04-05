@@ -23,9 +23,9 @@ Clone this repository
     git clone https://github.com/jvtrigueros/vagrant-pebble
     cd vagrant-pebble
 
-_Optional:_ Checkout the branch matching desired SDK version, `master` is on 2.9.
+_Optional:_ Checkout the tag matching desired SDK version, `master` is on v2.9.
 
-    git checkout sdk-3.0-dp4
+    git checkout v3.0-dp4
 
 Create and provision VM
 
@@ -37,7 +37,12 @@ Done!
 
     vagrant@vagrant-ubuntu-trusty-64:~$ pebble --version
     PebbleSDK 2.9
-
+    vagrant@vagrant-ubuntu-trusty-64:~$ pebble new-project --simple test
+    Creating new project test
+    vagrant@vagrant-ubuntu-trusty-64:~$ cd test/
+    vagrant@vagrant-ubuntu-trusty-64:~/test$ pebble build
+    ...
+    'build' finished successfully (0.160s)
 
 #### VM Defaults
 
