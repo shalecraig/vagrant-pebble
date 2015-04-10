@@ -24,7 +24,6 @@ echo "---------------------------------------------------"
 echo "                Setting up profile                 "
 echo "---------------------------------------------------"
 echo "export PATH=/home/vagrant/pebble-dev/$PEBBLE_SDK/bin:\$PATH" >> /home/vagrant/.profile
-source /home/vagrant/.profile
 cd /home/vagrant/pebble-dev/$PEBBLE_SDK
 echo "---------------------------------------------------"
 echo "               Getting ubuntu tools                "
