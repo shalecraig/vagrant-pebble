@@ -23,20 +23,24 @@ Clone this repository
     git clone https://github.com/jvtrigueros/vagrant-pebble
     cd vagrant-pebble
 
-_Optional:_ Checkout the tag matching desired SDK version, `master` is on v2.9.
+_Optional:_ Checkout the tag matching desired SDK version, `master` is on v3.0-dp4.
 
-    git checkout v3.0-dp4
+    git checkout v2.9
 
 Create and provision VM
 
     vagrant up
 
-Done!
+This will start VirtualBox in graphical mode, the reason being is because there's
+now an emulator packaged with the Pebble SDK. This makes development much easier.
+
+Once the provisioning is done, you can either ssh into the VM or use the VirtualBox
+graphical interface.
 
     vagrant ssh
 
     vagrant@vagrant-ubuntu-trusty-64:~$ pebble --version
-    PebbleSDK 2.9
+    PebbleSDK 3.0-dp4
     vagrant@vagrant-ubuntu-trusty-64:~$ pebble new-project --simple test
     Creating new project test
     vagrant@vagrant-ubuntu-trusty-64:~$ cd test/
@@ -47,4 +51,5 @@ Done!
 #### VM Defaults
 
 - **OS**: Ubuntu 14.04 x64
-- **RAM**: 4GB
+- **WM**: OpenBox
+- **RAM**: 2GB
