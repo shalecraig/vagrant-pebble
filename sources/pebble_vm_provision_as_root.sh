@@ -3,7 +3,6 @@
 echo "---------------------------------------------------"
 echo "                   Start as Root                   "
 echo "---------------------------------------------------"
-cd /home/vagrant
 echo "---------------------------------------------------"
 echo "                     Updating                      "
 echo "---------------------------------------------------"
@@ -13,9 +12,10 @@ echo "                     Upgrading                     "
 echo "---------------------------------------------------"
 sudo DEBIAN_FRONTEND=noninteractive apt-get --assume-yes --option Dpkg::Options::="--force-confdef" --option Dpkg::Options::="--force-confold" upgrade
 echo "---------------------------------------------------"
-echo "                     Installing                    "
+echo "           Installing Dev Dependencies             "
 echo "---------------------------------------------------"
-sudo apt-get install --assume-yes git-core python-pip python2.7-dev language-pack-en-base
+sudo apt-get install --assume-yes git-core python-pip python2.7-dev language-pack-en-base \
+  libsdl1.2debian libfdt1 libpixman-1-0
 sudo pip install virtualenv
 echo "---------------------------------------------------"
 echo "               Reconfiguring languages             "
