@@ -1,12 +1,7 @@
 # vagrant-pebble
 > Vagrant Setup for Pebble SDK
 
-This is a fork of [shalecraig](https://github.com/shalecraig)'s
-[repo](https://github.com/shalecraig/vagrant-pebble).
-This is a slighly modified version of his work, I'll try to rebase to upstream as
-much as I can.
-
-This Vagrant configuration will configure a VM with all the required for
+This Vagrant configuration will configure a VM with all the required dependencies for
 Pebble app development closely following this [guide](http://developer.getpebble.com/sdk/install/linux/).
 
 ## Prerequisites
@@ -20,7 +15,7 @@ Pebble app development closely following this [guide](http://developer.getpebble
 
 Clone this repository
 
-    git clone https://github.com/jvtrigueros/vagrant-pebble
+    git clone https://github.com/shalecraig/vagrant-pebble
     cd vagrant-pebble
 
 _Optional:_ Checkout the tag matching desired SDK version, `master` is on v3.0-dp7.
