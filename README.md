@@ -42,8 +42,7 @@ Done!
 ## Using Emulator
 
 To use the emulator, you'll need to start VirtualBox in GUI mode. You can do this by
-uncommenting [Vagrantfile:10](https://github.com/jvtrigueros/vagrant-pebble/blob/v3.0-dp7/Vagrantfile#L10).
-Then running `vagrant reload`.
+uncommenting "`vb.gui = true`" in the Vagrantfile, then running `vagrant reload`.
 
 #### VM Defaults
 
