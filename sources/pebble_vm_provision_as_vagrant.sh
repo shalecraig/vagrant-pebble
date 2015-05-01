@@ -14,8 +14,7 @@ cd /home/vagrant/pebble-dev
 echo "---------------------------------------------------"
 echo "              Getting the pebble sdk               "
 echo "---------------------------------------------------"
-wget -q -a /vagrant/pebble.log \
-  http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk2/$PEBBLE_SDK.tar.gz
+wget -q -a /vagrant/pebble.log http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk2/$PEBBLE_SDK.tar.gz
 
 tar -zxf $PEBBLE_SDK.tar.gz
 rm $PEBBLE_SDK.tar.gz
@@ -28,8 +27,7 @@ cd /home/vagrant/pebble-dev/$PEBBLE_SDK
 echo "---------------------------------------------------"
 echo "               Getting ubuntu tools                "
 echo "---------------------------------------------------"
-wget -q -a /vagrant/pebble.log \
-  http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk/arm-cs-tools-ubuntu-universal.tar.gz
+wget -q -a /vagrant/pebble.log http://assets.getpebble.com.s3-website-us-east-1.amazonaws.com/sdk/arm-cs-tools-ubuntu-universal.tar.gz
 tar -zxf arm-cs-tools-ubuntu-universal.tar.gz
 echo "---------------------------------------------------"
 echo "            Setting up using virtualenv            "
