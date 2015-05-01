@@ -1,39 +1,52 @@
-Hey there, it looks like you want to setup a Vagrant VM to develop [Pebble](https://getpebble.com/) watch faces and apps on.
+# vagrant-pebble
+> Vagrant Setup for Pebble SDK
 
-This is the right place to look!
+This Vagrant configuration will configure a VM with all the required dependencies for
+Pebble app development closely following this [guide](http://developer.getpebble.com/sdk/install/linux/).
 
-Once you're done, you should be able to run:
+## Prerequisites
 
-```
-$ vagrant up
-$ vagrant ssh
-vagrant@vagrant-ubuntu-trusty-64:~$ pebble --version
-# PebbleSDK 2.9
-```
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+  - _tested with version 4.3_
+- [Vagrant](http://www.vagrantup.com/downloads)
+  - _tested with version 1.7.2_
 
-Yep, that's right. [Pebble SDK](https://developer.getpebble.com/) v2.9 in a Vagrant image.
+## Getting Started
 
-It's not pretty, so pull requests are happily taken.
+Clone this repository
 
-Use it at your own risk.
+    git clone https://github.com/shalecraig/vagrant-pebble
+    cd vagrant-pebble
 
-Instructions
-------------
+_Optional:_ Checkout the tag matching desired SDK version, `master` is on v3.0-dp7.
 
-- [Install Vagrant](https://docs.vagrantup.com/v2/installation/).
-    (Tested with `Vagrant 1.6.5`)
+    git checkout v2.9
 
-- Clone my repo.
-    Run:
-    ```
-    $ git clone https://github.com/shalecraig/vagrant-pebble.git
-    $ cd vagrant-pebble
-    $ vagrant up
-    # wait for about 10 mins
-    $ vagrant ssh
-    $ pebble --version
-    # PebbleSDK 2.9
-    ```
-- Dive into the [Pebble Hello World](https://developer.getpebble.com/2/additional/hello-world/)
+Create and provision VM
 
-That's it.
+    vagrant up
+
+Done!
+
+    vagrant ssh
+
+    vagrant@vagrant-ubuntu-trusty-64:~$ pebble --version
+    PebbleSDK 3.0-dp7
+    vagrant@vagrant-ubuntu-trusty-64:~$ pebble new-project --simple test
+    Creating new project test
+    vagrant@vagrant-ubuntu-trusty-64:~$ cd test/
+    vagrant@vagrant-ubuntu-trusty-64:~/test$ pebble build
+    ...
+    'build' finished successfully (0.160s)
+
+## Using Emulator
+
+To use the emulator, you'll need to start VirtualBox in GUI mode. You can do this by
+uncommenting [Vagrantfile:10](https://github.com/jvtrigueros/vagrant-pebble/blob/v3.0-dp7/Vagrantfile#L10).
+Then running `vagrant reload`.
+
+#### VM Defaults
+
+- **OS**: Ubuntu 14.04 x64
+- **WM**: OpenBox
+- **RAM**: 2GB
