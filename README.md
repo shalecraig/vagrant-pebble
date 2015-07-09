@@ -18,7 +18,7 @@ Clone this repository
     git clone https://github.com/shalecraig/vagrant-pebble
     cd vagrant-pebble
 
-_Optional:_ Checkout the tag matching desired SDK version, `master` is on v3.0-dp7.
+_Optional:_ Checkout the tag matching desired SDK version, `master` is on v3.1.
 
     git checkout v2.9
 
