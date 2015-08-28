@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PEBBLE_SDK=PebbleSDK-3.2
+PEBBLE_SDK=PebbleSDK-3.3
 
 echo "---------------------------------------------------"
 echo "                 Start as vagrant                  "
