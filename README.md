@@ -18,9 +18,9 @@ Clone this repository
     git clone https://github.com/shalecraig/vagrant-pebble
     cd vagrant-pebble
 
-_Optional:_ Checkout the tag matching desired SDK version, `master` is on v3.4.
+_Optional:_ Checkout the tag matching desired SDK version, `master` is on v3.6.
 
-    git checkout v3.4
+    git checkout v3.6
 
 Create and provision VM
 
