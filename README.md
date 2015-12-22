@@ -18,9 +18,9 @@ Clone this repository
     git clone https://github.com/shalecraig/vagrant-pebble
     cd vagrant-pebble
 
-_Optional:_ Checkout the tag matching desired SDK version, `master` is on v3.6.2.
+_Optional:_ Checkout the tag matching desired SDK version, `master` is on v3.7.
 
-    git checkout v3.6.2
+    git checkout v3.7
 
 Create and provision VM
 
@@ -31,7 +31,7 @@ Done!
     vagrant ssh
 
     vagrant@vagrant-ubuntu-trusty-64:~$ pebble --version
-    PebbleSDK v3.6.2
+    PebbleSDK v3.7
     vagrant@vagrant-ubuntu-trusty-64:~$ pebble new-project --simple test
     Creating new project test
     vagrant@vagrant-ubuntu-trusty-64:~$ cd test/
